@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- 
+// Options.html: The web UI of the options page 
+// Author: Abdullah Ali
+// Contact: @xyleques, xyleques@me.com
+ -->
+<html>
+<head>
+  <title>My Test Extension Options</title>
+  <style>
+    body { 
+      padding: 10px;
+      padding-top: 0; 
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    label{
+      margin-bottom: 30px;
+    }
+    section{
+      font-size: 8pt;
+    }
+    h2{
+
+    }
+    h4{
+      margin: 0 auto 5px;
+    }
+    *:focus {outline: 0;}
+
+    #wrapper{
+      width: 370px;
+      position: relative;
+    }
+    .title{
+      margin: 5px auto 0 2%;
+    }
+  
+
+    #idleDiv{
+      width: 40%;
+      height: 50px;
+      position: relative;
+      float: left;
+      margin: 5px 2px 15px 20px;
+      background: #fbfbfb;
+      padding: 10px;
+      border: 1px solid #eee;
+      border-top: 3px solid #EDAB95;
+    }
+  
+
+    #mouseDiv{
+      width: 40%;
+      height:90px;
+      position: relative;
+      float: left;
+      margin: 5px 2px 15px 20px;
+      background: #fbfbfb;
+      padding: 10px;
+      border: 1px solid #eee;
+      border-top: 3px solid #85EADC;
+    }
+    
+  
+    #saveDiv{
+      position: relative;
+      width: 75px;
+      padding: 3px;
+      margin: 30px auto 0;
+    }
+    #save{
+      background: #fff;
+      background-image: url('aui.png');
+      background-size: 0%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      border: 1px solid #ccc;
+      color: #656565;
+      width: 75px;
+      height: 75px;
+      border-radius: 38px;
+      cursor: pointer;
+      transition: all 0.7s ease-in;
+    }
+    #save:hover{
+      border: none;
+      background-image: url('aui.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      color: transparent;
+      transition: all 0.7s ease-in;
+    }
+
+  
+
+
+  </style>
+</head>
+
+<body>
+
+<div id="wrapper">
+<h2 class="title">Mouse Adaptations</h2>
+<h4 class="title">options</h4>
+
+<!-- User identification (participant ID) -->
+  <div id="idDiv">
+    <label>User ID
+      <input type="text" id="myName" />
+    </label>
+  </div>
+
+
+    <!-- mouse-->
+    <div id="idleDiv">
+      <h4>Idle Adaptations</h4>
+      <input type="radio" name = "adapt" id="idlePulse"> Idle Pulse</br>
+      <input type="radio" name = "adapt" id="idleGlow"> Idle Glow</br>
+
+
+      <!--<input type="checkbox" id="pulseAdapt"> Pulse Cursor-->
+    </div>
+    
+    <div id="mouseDiv">
+      <h4>Constant Adaptations</h4>
+      <input type="radio" name = "adapt" id="defaultCtrl"> Normal Mouse</br>
+      <input type="radio" name = "adapt" id="EnhancedCtrl"> Enhanced Control</br>
+      <input type="radio" name = "adapt" id="UltimateCtrl"> Ultimate Control</br>
+      <input type="radio" name = "adapt" id="offoption"> Off</br>
+
+      <!--<input type="checkbox" id="pulseAdapt"> Pulse Cursor-->
+    </div>
+
+
+
+      
+
+      <BR><BR>
+      <div id="saveDiv">
+        <button id="save">Save</button>
+      </div>
+      <div style="height: 25px;">
+        <div id="status"></div>
+      </div>
+
+</div>
+
+  <script src="options.js"></script>
+</body>
+</html>

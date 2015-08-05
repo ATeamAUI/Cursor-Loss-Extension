@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+	
+	<head>
+
+        <script type="text/javascript" src= "timermouseoptions.js"></script>
+      	<script type="text/javascript">
+      	chrome.extension.onConnect.addListener(function (port) {
+			    port.onMessage.addListener(function (message) {
+			        switch(port.name) {
+			            case "color-divs-port":
+			                colorDivs();
+			            break;
+			        }
+			    });
+			});
+      </script>
+		<style type="text/css">
+		  body { 
+		      padding: 10px;
+		      padding-top: 0; 
+		      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		    }
+
+		    label{
+		      margin-bottom: 30px;
+		    }
+		    section{
+		      font-size: 8pt;
+		    }
+		    h2{
+				margin: 0 auto 10px;
+		    }
+		    h4{
+		      margin: 0 auto 5px;
+		    }
+		    a{
+		    	text-decoration: none;
+		    }
+		   a img {
+
+			 border:0;
+			 border-style: none;
+			}
+			*:focus {outline: 0;}
+			
+		    #wrapper{
+		      width: 370px;
+		      position: relative;
+		    }
+		    .title{
+		      margin: 5px auto 0 2%;
+		    }
+		    #cOpt{
+	    	  width: 130px;
+		      height: 30px;
+		      margin: 30px auto 0 2%;
+		      line-height: 30px;
+		      text-align: center;
+		      cursor: pointer;
+		      background: #fbfbfb;
+		      border: 1px solid #eee;
+      		  border-top: 3px solid #fc2862;
+		      color: #656565;
+		      transition: all 0.7s ease-in;
+		    }
+		    #cOpt:hover{
+		      transition: all 0.7s ease-in;
+		    }
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+		<h2 class="title">Mouse Movement Classifier</h2>
+			
+		<a href="options.html">
+			<div id="cOpt">
+				Change Options
+			</div>
+		</a>
+
+			<!-- Trying to display Mouse movement perfromance information (Future work) -->
+		</div>
+	</body>
+</html>

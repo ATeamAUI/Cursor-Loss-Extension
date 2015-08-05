@@ -1,0 +1,35 @@
+{
+    "name": "Cursor Loss Adaptation",
+    "description": "
+    Casey's cleaned up adaptations for cursor loss. Includes idle pulses and options for changing mouse size. ",
+    "version": "5.0",
+    "options_page": "options.html",
+    "icons":{
+            "128": "newicon.png"
+        },
+    "background":{
+            "scripts": ["background.js"]
+            },
+    "permissions": [
+    "tabs","<all_urls>", "storage", "notifications",  "contextMenus",
+        "activeTab"  
+    ],
+    "browser_action": {
+        "default_icon": "newicon.png",
+        "default_popup": "popup.html",
+        "default_title": "Mouse movement performance"
+    },
+    
+    "content_scripts": [
+        {
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+            ],
+        "js": ["jquery.js", "timermouseoptions.js"],
+        "run_at": "document_end"         // where is the options js?
+        }
+    ], 
+    "manifest_version":2
+}
+
