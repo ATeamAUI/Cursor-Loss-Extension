@@ -119,24 +119,16 @@ function getStorage() {
   // checks if settings were stored
   if (idleGlow == true && timerstatus ==-1){
 
-    console.log("CA + TS idle");
-
     barElement.style.position = "fixed";
     barElement.style.display = "block"; // displaying 
-
     barElement.style.top = y;
-
     barElement.style.left = x;
-
     barElement.style.zIndex = "9998 !important";
-
     barElement.className = "openclass";
     barElement.classList.add("breath");
     var tmp = document.createTextNode("");
     barElement.appendChild(tmp);
-
     document.body.appendChild(barElement);
-
     document.body.appendChild(barElement);
   }
 
@@ -159,8 +151,6 @@ function getStorage() {
     document.body.appendChild(barElement);
     console.log("New Position: "+ barElement.style.top);
     console.log("New Position: "+ barElement.style.left);
-
-
   }
 
   if (defaultCtrl == true){
@@ -191,8 +181,10 @@ function getStorage() {
 
 
 $(document).ready(function() {
-window.setInterval(getStorage,0002);
-
+window.setInterval(getStorage,0000);
+//calls storage constantly - this affects some lagtime
+// changing how frequently it is called reduces lag in the browser
+// but adds small pause each time the cursor image replaces the default mouse 
 
 document.onmousemove = function(e){
   //attaches css elements to cursor position
